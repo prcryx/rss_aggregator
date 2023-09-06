@@ -1,4 +1,4 @@
 .env
 .vscode/
-thunder_cilent/
+thunder-tests/
 *.exe
