@@ -1,0 +1,21 @@
+[
+    {
+        "_id": "2148f862-46db-4584-8c7b-3267ddc4ac74",
+        "colId": "history",
+        "containerId": "",
+        "name": "127.0.0.1:8000/v1/healthz",
+        "url": "127.0.0.1:8000/v1/healthz",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-09-06T07:19:25.861Z",
+        "modified": "2023-09-06T07:19:25.861Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "tests": []
+    }
+]

@@ -10,6 +10,7 @@ import (
 	"github.com/go-chi/cors"
 	godotenv "github.com/joho/godotenv"
 	cmn "github.com/prcryx/rss_aggregator/common"
+	routes "github.com/prcryx/rss_aggregator/routes"
 )
 
 func main() {
@@ -20,10 +21,10 @@ func main() {
 		log.Fatal(cmn.PortNotFound)
 	}
 
-	router := chi.NewRouter()
+	root := chi.NewRouter()
 
 	//middleware
-	router.Use(
+	root.Use(
 		cors.Handler(
 			cors.Options{
 				AllowedOrigins:   []string{"https://*", "http://*"},
@@ -37,9 +38,11 @@ func main() {
 	)
 
 	server := &http.Server{
-		Handler: router,
+		Handler: root,
 		Addr:    ":" + port,
 	}
+
+	routes.MountAll(root, routes.V1)
 
 	fmt.Printf("listening on port: %v...", port)
 	err := server.ListenAndServe()
