@@ -1,11 +1,11 @@
 package routes
 
 const (
-    V1 = "/v1"
-    V2 = "/v2"
+	V1 = "/v1"
+	V2 = "/v2"
 )
 
-
-const(
-    HealthCheck = "/healthz"
+const (
+	HealthCheck = "/healthz"
+	Error       = "/err"
 )
