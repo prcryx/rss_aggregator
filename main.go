@@ -9,7 +9,7 @@ import (
 	chi "github.com/go-chi/chi"
 	"github.com/go-chi/cors"
 	godotenv "github.com/joho/godotenv"
-	cmn "github.com/prcryx/rss_aggregator/common"
+	errs "github.com/prcryx/rss_aggregator/common/errs"
 	routes "github.com/prcryx/rss_aggregator/routes"
 )
 
@@ -18,7 +18,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		log.Fatal(cmn.PortNotFound)
+		log.Fatal(errs.PortNotFound)
 	}
 
 	root := chi.NewRouter()
