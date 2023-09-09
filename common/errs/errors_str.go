@@ -1,7 +1,7 @@
 package errors
 
 const (
-	PortNotFound       = "Port not found error"
-	FailedToMarshal    = "Failed to marshal json response"
-	SomethingWentWrong = "Something went wrong"
+	PortNotFound       = "port not found error"
+	FailedToMarshal    = "failed to marshal json response"
+	SomethingWentWrong = "something went wrong"
 )
