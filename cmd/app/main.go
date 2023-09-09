@@ -14,7 +14,7 @@ func main() {
 
 	env, err := config.LoadConfig()
 	if err != nil {
-		log.Fatal(err.Error())
+		log.Fatal(err)
 	}
 
 	run(env)
