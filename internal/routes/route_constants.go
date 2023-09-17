@@ -8,4 +8,5 @@ const (
 const (
 	HealthCheck = "/healthz"
 	Error       = "/err"
+	SignUp       = "/signup"
 )
